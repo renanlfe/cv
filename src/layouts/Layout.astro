@@ -41,8 +41,74 @@ const ogImgUrl = canonicalURL + socialImage;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImgUrl} />
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+
+      window.localStorage.setItem("theme", theme);
+
+      // Theme toggle functionality
+      function updateIcons() {
+        const isDark = document.documentElement.classList.contains("dark");
+
+        document.querySelectorAll(".theme-toggle").forEach((button) => {
+          const sunIcon = button.querySelector(".sun-icon");
+          const moonIcon = button.querySelector(".moon-icon");
+
+          if (sunIcon && moonIcon) {
+            if (isDark) {
+              sunIcon.classList.remove("hidden");
+              moonIcon.classList.add("hidden");
+            } else {
+              sunIcon.classList.add("hidden");
+              moonIcon.classList.remove("hidden");
+            }
+          }
+        });
+      }
+
+      function handleToggleClick() {
+        document.documentElement.classList.toggle("dark");
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        updateIcons();
+      }
+
+      function initThemeToggle() {
+        document.querySelectorAll(".theme-toggle").forEach((button) => {
+          button.addEventListener("click", handleToggleClick);
+        });
+        updateIcons();
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initThemeToggle);
+      } else {
+        initThemeToggle();
+      }
+    </script>
   </head>
-  <body class="bg-black font-sans">
+  <body
+    class="bg-[var(--bg-main)] font-sans text-[var(--text-main)] transition-colors duration-300"
+  >
     <Header siteLogo={siteLogo} navLinks={navLinks} />
     <main class="mx-auto max-w-3xl px-5">
       <slot />

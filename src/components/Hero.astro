@@ -7,7 +7,7 @@ const { name, specialty, summary, email } = Astro.props;
 
 <section class="py-24 md:py-32" id="#hero">
   <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
+    class="tracking-tightest mb-1.5 font-serif text-7xl font-bold text-[var(--text-main)] sm:text-8xl md:mb-0 md:text-9xl"
   >
     {name}
   </h1>
@@ -16,7 +16,7 @@ const { name, specialty, summary, email } = Astro.props;
   >
     {specialty}
   </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
+  <p class="mb-16 text-base font-normal text-[var(--text-muted)] md:text-lg">
     {summary}
   </p>
 

@@ -1,12 +1,11 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
-  description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+  title: "Renan Ferreira — Desenvolvedor FullStack",
+  author: "Renan Ferreira",
+  description: "Desenvolvedor Full Stack, com ênfase em Java e Kotlin.",
   lang: "en",
-  siteLogo: "/alejandro-small.jpg",
+  siteLogo: "/renan-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -25,10 +24,9 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
-    summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    name: "Renan Ferreira",
+    specialty: "Desenvolvedor Back End & Web Developer",
+    summary: "Desenvolvedor Full Stack, com ênfase em Java e Kotlin.",
     email: "example@email.com",
   },
   experience: [
@@ -87,11 +85,13 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      A tecnologia me fascina como ferramenta para a resolução de problemas. Acredito que a organização, paciência e persistência são essenciais para alcançar resultados eficientes.
+      Sou um profissional com mais de 10 anos na área de tecnologia, atuando com suporte a sistemas ERP em distribuidoras e no setor farmacêutico. Experiência em correção de falhas, configuração de ambientes, treinamento de usuários e otimização de processos em banco de dados. Conhecimentos em desenvolvimento de sites com HTML, CSS, JavaScript e WordPress.
+ 
+      Formado em Análise e Desenvolvimento de Sistemas e focado em ampliar minhas competências como Desenvolvedor Full Stack, com ênfase em Java e Kotlin. Busco aplicar minha experiência técnica e visão analítica no desenvolvimento de soluções eficientes, contribuindo com projetos e evoluindo na área.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/renan-big.jpg",
   },
 };
 

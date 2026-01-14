@@ -9,6 +9,21 @@
   --color-white: #e2e8f0;
   --color-black: #0e141b;
 
+  /* Semantic Colors - Light Mode (default) */
+  --bg-main: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #475569;
+  --bg-header: #ffffff;
+}
+
+@layer base {
+  :root.dark {
+    --bg-main: #0e141b;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --bg-header: #0e141b;
+  }
+
   --text-xs: 0.875rem;
   --text-xs--line-height: 1.125rem;
   --text-sm: 1rem;
@@ -46,6 +61,7 @@
     10% {
       transform: translateY(-100%);
     }
+
     100% {
       transform: translateY(0);
     }
