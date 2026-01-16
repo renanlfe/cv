@@ -16,9 +16,10 @@ export interface SiteContent {
 }
 
 export interface HeroProps {
+  greeting: string;
   name: string;
-  specialty: string;
-  summary: string;
+  tagline: string;
+  profilePhoto: string;
   email: string;
 }
 
